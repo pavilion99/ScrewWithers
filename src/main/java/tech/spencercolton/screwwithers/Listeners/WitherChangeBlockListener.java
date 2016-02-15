@@ -1,5 +1,6 @@
 package tech.spencercolton.screwwithers.Listeners;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
@@ -21,6 +22,7 @@ public class WitherChangeBlockListener implements Listener {
     @EventHandler
     @SuppressWarnings("unused")
     public void onEvent(EntityChangeBlockEvent e) {
+        Bukkit.getLogger().info(e.getEntityType().toString());
         if(!plugin.enabled())
             return;
 
